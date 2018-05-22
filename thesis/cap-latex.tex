@@ -1,0 +1,142 @@
+\chapter{Usando o \LaTeX{} e este modelo}
+
+Não é necessário que o texto seja redigido usando \LaTeX{}, mas é fortemente
+recomendado o uso dessa ferramenta, pois ela facilita diversas etapas do
+trabalho e o resultado final é muito bom\footnote{O uso de um sistema de
+controle de versões, como mercurial (\url{mercurial-scm.org}) ou git
+(\url{git-scm.com}), também é altamente recomendado.}. Este modelo inclui
+vários comentários explicativos e pacotes interessantes para auxiliá-lo com
+ele.
+
+O modelo é composto por estes arquivos:
+
+\begin{itemize}
+  \item Arquivo principal:
+  \begin{itemize}
+    \item \texttt{tese-tallys.tex} (leia os comentários neste arquivo!)
+  \end{itemize}
+
+  \item Arquivo com as \textit{packages} usadas e suas configurações:
+  \begin{itemize}
+    \item \texttt{miolo-preambulo.tex} (leia os comentários neste arquivo!)
+  \end{itemize}
+
+  \item Arquivos com formato sugerido de capa, resumo e outros elementos:
+  \begin{itemize}
+    \item \texttt{imeusp.sty} (configurações de formatação -- não é preciso editar)
+    \item \texttt{metadados-tese.tex} (é preciso inserir os metadados aqui)
+    \item \texttt{folhas-de-rosto.tex} (resumo, dedicatória etc.)
+  \end{itemize}
+
+  \item Arquivos dos capítulos e apêndice:
+  \begin{itemize}
+    \item \texttt{cap-introducao.tex}
+    \item \texttt{cap-latex.tex}
+    \item \texttt{cap-tutorial.tex}
+    \item \texttt{cap-exemplos.tex}
+    \item \texttt{cap-conclusoes.tex}
+    \item \texttt{ape-conjuntos.tex}
+  \end{itemize}
+
+  \item Diretório de figuras:
+  \begin{itemize}
+    \item \texttt{./figuras/}
+  \end{itemize}
+
+  \item Outros arquivos auxiliares:
+  \begin{itemize}
+    \item \texttt{bibliografia.bib} (arquivo de dados bibliográficos)
+    \item \texttt{plainnat-ime.bbx} (estilo plainnat para bibliografias com biblatex)\index{biblatex}
+    \item \texttt{plainnat-ime.cbx} (estilo plainnat para citações com biblatex)
+    \item \texttt{plainnat-ime.bst} (estilo plainnat para bibliografias com bibtex)\index{bibtex}
+    \item \texttt{alpha-ime.bst} (estilo alpha para bibliografias com bibtex)\index{bibtex}
+    \item \texttt{natbib-ime.sty} (tradução da \textit{package} padrão natbib -- citações com bibtex)\index{natbib}
+    \item \texttt{hyperxindy.xdy} (arquivo de configuração para hiperlinks no índice remissivo)
+    \item \texttt{Makefile} (arquivo que automatiza a geração do documento com o comando \textsf{make})
+    \item \texttt{latexmkrc} (arquivo que automatiza a geração do documento com o comando \textsf{latexmk})
+  \end{itemize}
+\end{itemize}
+
+Para compilar o documento, basta executar o comando \textsf{latexmk} (ou
+\textsf{make}). Talvez seu editor ofereça uma opção de menu para compilar o
+documento, mas ele provavelmente depende do \textsf{latexmk} para isso.
+\LaTeX{} gera diversos arquivos auxiliares durante a compilação que, em
+algumas raras situações, podem ficar inconsistentes (causando erros de
+compilação ou erros no PDF gerado, como referências faltando ou numeração de
+páginas incorreta no sumário). Nesse caso, é só usar o comando
+\textsf{latexmk -C} (ou \textsf{make clean}), que apaga todos os arquivos
+auxiliares gerados, e em seguida rodar \textsf{latexmk} (ou \textsf{make})
+novamente.
+
+\section{Instalação do \LaTeX{}}
+
+\LaTeX{} é, na verdade, um conjunto de programas. Ao invés de procurar e
+baixar cada um deles, o mais comum é baixar um pacote com todos eles juntos.
+Há dois pacotes desse tipo disponíveis: MiK\TeX{} (\url{miktex.org}) e
+\TeX{}Live (\url{www.tug.org/texlive}). Ambos funcionam em Linux, Windows e
+MacOS X. Em Linux, \TeX{}Live costuma estar disponível para instalação junto
+com os demais opcionais do sistema. Em MacOS X, o mais popular é o Mac\TeX{}
+(\url{www.tug.org/mactex/}), a versão do \TeX{}Live para MacOS X.  Em Windows,
+o mais comumente usado é o MiK\TeX{}.
+
+Por padrão, eles não instalam tudo que está disponível, mas sim apenas os
+componentes mais usados, e oferecem um gestor de pacotes que permite adicionar
+outros. Embora uma instalação completa do \LaTeX{} seja relativamente grande
+(perto de 5GB), em geral vale a pena instalar a maior parte dos pacotes. Se
+você preferir uma instalação mais ``enxuta'', não deixe de incluir todos os
+pacotes necessários para este modelo. Por exemplo, no debian:
+
+\begin{description}
+  \item [inconsolata] -- está incluído em ``texlive-fonts-extra''
+  \item [siunitx] -- está incluído em ``texlive-science''
+  \item [biblatex] -- está incluído em ``texlive-bibtex-extra''
+  \item [biber] -- é um pacote separado
+  \item [xindy] -- é um pacote separado
+\end{description}
+
+Também é muito importante ter o \textsf{latexmk} (ou o \textsf{make}). No Linux,
+a instalação é similar à de outros programas. No MacOS X e no Windows,
+\textsf{latexmk} pode ser instalado pelo gestor de pacotes do MiK\TeX{} ou
+\TeX{}Live. Observe que ele depende da linguagem \textsf{perl}, que precisa ser
+instalada à parte no Windows (\url{www.perl.org/get.html}).
+
+\section{Bibliografia}
+
+Você pode usar referências bibliográficas nos formatos ``alpha'' ou ``plainnat''.
+Se estiver usando natbib+bibtex\index{natbib}\index{bibtex}, use os arquivos .bst
+``alpha-ime.bst'' ou ``plainnat-ime.bst'', que são versões desses dois formatos
+traduzidas para o português. Se estiver usando biblatex\index{biblatex}
+(recomendado), escolha o estilo ``alphabetic'' (que é um dos estilos padrão do
+biblatex) ou ``plainnat-ime''. O arquivo de exemplo inclui todas essas opções;
+basta des-comentar as linhas correspondentes e, se necessário, modificar o
+arquivo Makefile para chamar o bibtex\index{bibtex} ao invés do
+biber\index{biber} (este último é usado em conjunto com o biblatex).
+
+\section{Perguntas Frequentes sobre o Modelo}
+
+\begin{itemize}
+
+\item \textbf{Posso usar pacotes \LaTeX{} adicionais aos sugeridos, como por exemplo: pstricks, pst-all, etc?}\\
+Com certeza! Você pode modificar o arquivo o quanto desejar. O modelo \LaTeX{} serve só como uma ajuda inicial para o seu trabalho.
+
+\item \textbf{As figuras podem ser colocadas no meio do texto ou devem ficar no final dos capítulos?}\\
+Em geral as figuras devem ser apresentadas assim que forem referenciadas. Colocá-las no final dos capítulos dificultaria um pouco a leitura, mas isso depende do estilo do autor, orientador, ou lugar de publicação. Converse com seu orientador!
+
+\item \textbf{Existe algo específico para citações de páginas web?}\\
+Biblatex define o tipo ``online''; bibtex\index{bibtex}, por padrão, não tem um tipo específico. Se o que você está citando não é um texto específico mas sim um sítio, como por exemplo o sítio de uma empresa ou de um produto, pode ser mais adequado colocar a referência como nota de rodapé e não na lista de referências; nesses casos, algumas pessoas acrescentam uma segunda lista de referências especificamente para recursos \emph{online} (biblatex \index{biblatex} permite criar múltiplas bibliografias). Se, no entanto, trata-se de um texto específico, como uma postagem em um blog, uma matéria jornalística ou mesmo uma mensagem de email para uma lista de discussão, a citação deve seguir o formato de outros tipos de documento e informar título, autor etc. Normalmente usa-se o campo ``howpublished'' para especificar que se trata de um recurso \emph{online}. Observe também que artigos que fazem parte de uma publicação, como os anais de um congresso, e que estão disponíveis \emph{online} devem ser citados por seu tipo verdadeiro e apenas incluir o campo ``url'' (não é nem necessário usar o comando \textsf{\textbackslash{}url\{\}}), aceito por todos os tipos de documento do bibtex/biblatex.
+
+\item \textbf{A bibliografia está sendo impressa em inglês (usa ``and'' ao invés de ``e'' para separar os nomes dos autores)}\\
+Você deve estar usando um estilo de bibliografia bibtex diferente dos sugeridos. Uma simples solução é copiar o arquivo de estilo correspondente da sua instalação \LaTeX{} para o diretório onde seus arquivos estão e mudar ``and'' por ``e'' (ou ``\&'' se preferir) na função format.names. Biblatex tem pleno suporte a diferentes línguas e é possível personalizar as traduções (há um exemplo no modelo).
+
+\item \textbf{Aparece uma folha em branco entre os capítulos}\\
+Essa característica foi colocada propositalmente, dado que todo capítulo deve (ou deveria) começar em uma página de numeração ímpar (lado direito do documento). Acrescente ``openany'' como opção da classe, i.e., \textsf{\textbackslash{}documentclass[openany,11pt,twoside,a4paper]\{book\}}.
+
+\item \textbf{É possível resumir o nome das seções/capítulos que aparece no topo das páginas?}\\
+Sim, usando a sintaxe \textsf{\textbackslash{}section[mini-titulo]\{titulo enorme\}}. Isso é especialmente útil nos \textit{captions}\index{Legendas} das figuras e tabelas, que muitas vezes são demasiadamente longos para a lista de figuras/tabelas.
+
+\item \textbf{Existe algum programa para gerenciar referências em formato bibtex?}\\
+Sim, há vários. Uma opção bem comum é o JabRef; outra é usar Zotero\index{Zotero} ou Mendeley\index{Mendeley} e exportar os dados deles no formato .bib.
+
+\item \textbf{Como faço para usar o Makefile (comando make) no Windows?}\\
+Se você instalou o \LaTeX{} usando o Cygwin, você já deve ter o comando make instalado; se não, tente o MSYS2. Se você pretende usar algum dos editores sugeridos, é possível deixar a compilação a cargo deles, dispensando o uso do make.
+\end{itemize}
