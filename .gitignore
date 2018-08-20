@@ -21,3 +21,4 @@ missfont.log
 *.fdb_latexmk
 *-current
 tese-tallys.pdf
+datasets/
