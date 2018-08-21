@@ -14,6 +14,25 @@
  criteria and scripts used to automate the search.
  - Presentations history and pdfs used to talk about my work since it was born
 
+## Roadmap
+
+- [ ] Revisão de Literatura
+  - [x] Levantamento de trrabalhos Relacionados
+  - [ ] Referencial teórico sobre visualização baseada em imagens
+  - [ ] Referencial teórico sobre bundling
+  - [ ] Referencial teórico sobre density maps
+  - [ ] Referencial teórico sobre sistemas de controle do tráfego
+
+- [ ] Codificação
+  - [x] Aquisição dos dados do simulador
+  - [ ] Instalação de ferramentas para manipulação dos dados
+  - [ ] Plot dos dados sobre o mapa de SP
+  - [ ] Visualização inicial das trajetórias dos veículos
+
+- [ ] Exame de Qualificação
+    - [ ] Esqueleto do texto (15/09)
+    - [ ] Escrita do texto
+
 ## Acknowledges
 
  This work was financed by brazilian people who pay their taxes =)
