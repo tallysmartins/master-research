@@ -46,7 +46,7 @@ say "Tested on python 2.7"
 
 say "Installing dependencies"
 
-quiet sudo python -m pip install --upgrade pip
-quiet sudo pip install -r requirements.txt
+run sudo python -m pip install --upgrade pip
+run sudo pip install -r requirements.txt
 
 say "Installed successfully"
