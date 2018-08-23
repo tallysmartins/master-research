@@ -35,4 +35,4 @@
 
 ## Acknowledges
 
- This work was financed by brazilian people who pay their taxes =)
+ This work was financed by Brazilian people who pay their taxes =)

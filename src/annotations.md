@@ -45,3 +45,7 @@ esse comportamento modificado
 [Comparison of bokeh and dash](https://blog.sicara.com/bokeh-dash-best-dashboard-framework-python-shiny-alternative-c5b576375f7f)
 
 [Several python plot libraries - jupytalk](http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/10_plotting_libraries.html#geoplotlib-for-maps-in-a-gui)
+
+[Tutorial folium](https://blog.prototypr.io/interactive-maps-with-python-part-1-aa1563dbe5a9)
+
+[Folium notebooks examples](http://nbviewer.jupyter.org/github/python-visualization/folium/tree/master/examples/)
