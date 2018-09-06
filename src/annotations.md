@@ -6,7 +6,7 @@
 	- dash (JS)
 
 2) Fazer um toy application com cada uma
-	
+
 - a) Plotar os pontos de uma linha
 - b) Plotar um grafo com a trajetória de uma linha
 - c) Fazer uma animação de uma linha
@@ -18,16 +18,16 @@
 |:-----:|:----------:|:------:|------|
 | **a** |      v     |   -    |   -  |
 | **b** |      v     |   -    |   -  |
-| **c** |      -     |   -    |   -  |
-| **d** |      -     |   -    |   -  |
-| **e** |      -     |   -    |   -  |
+| **c** |      v     |   -    |   -  |
+| **d** |      v     |   -    |   -  |
+| **e** |      v     |   -    |   -  |
 | **f** |      -     |   -    |   -  |
 
 Testar com 3 tamanhos de dados:
 
-- Small = 10_000
-- Medium = 100_000 
-- Large = 300_000
+- Small = 1_000_000
+- Medium = 10_000_000
+- Large = 30_000_000
 
 3) Procurar exemplos de bundling na lib ou como plotar o resultado do bundling
 4) Precisa de GPU? Se sim, como a lib faria essa integração?
