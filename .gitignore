@@ -22,3 +22,5 @@ missfont.log
 *-current
 tese-tallys.pdf
 datasets/
+*checkpoints/
+*transformations/

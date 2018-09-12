@@ -48,5 +48,8 @@ say "Installing dependencies"
 
 run sudo python -m pip install --upgrade pip
 run sudo pip install -r requirements.txt
+# libgeos-dev used by python Basemap package, requires matplotlib 1.5.0, otherwise
+# some functions might break
+run sudo apt install libgeos++-dev libgeos-3.5.1 libgeos-c1v5 libgeos-dbg libgeos-dev libgeos-doc ruby-geos
 
 say "Installed successfully"

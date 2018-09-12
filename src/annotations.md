@@ -63,9 +63,10 @@ problema em uma frase: (data-science ou data-viz?)
 - Como é a mudança do fluxo de entrada de pessoas em diferentes dias/climas?
 - Onde moram a maioria das pessoas que vão para o centro
 - Qual a velocidade média das ruas as 11 da manha
+- Qual a melhor rota para se chegar de um ponto A até um ponto B levando
+em consideração o tráfego?
 
 ---------------- Para deixar o problema mais claro/interessante ---------------
-
 How can we translate data into dollars?
 What impact do I want to make with this data?
 What business value does our model bring to the table?
