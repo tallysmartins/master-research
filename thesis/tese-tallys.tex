@@ -33,7 +33,7 @@
 % seu comportamento em função da língua (em especial, babel/polyglossia).
 % A última língua da lista é a língua padrão do documento.
 %\documentclass[12pt,twoside,brazil,english]{book}
-\documentclass[12pt,twoside,english,brazil]{book}
+\documentclass[12pt,oneside,notitlepage,english,brazil]{book}
 %\documentclass[12pt,twoside,english,brazil]{article}
 
 % tamanho da página e margens
@@ -255,11 +255,6 @@
   pdfkeywords={LaTeX, tese, dissertação, IME/USP},
 }
 
-% Para gerar a capa e demais páginas iniciais de uma tese/dissertação para o
-% IME/USP automaticamente no formato sugerido, modifique os dados neste arquivo.
-% Se estiver escrevendo um artigo ou for gerar a capa etc. manualmente, remova.
-\input{metadados-tese}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%% AQUI COMEÇA O CONTEÚDO DE FATO %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -283,31 +278,9 @@
 % Este formato está definido mais acima na seção "APARÊNCIA/FORMATAÇÃO"
 \pagestyle{frontback}
 
-% As folhas de rosto no formato sugerido para teses/dissertações do IME/USP.
-% Se estiver escrevendo um artigo ou não quiser usar, remova.
-\input{folhas-de-rosto}
-
 % Sumário (obrigatório)
 \tableofcontents
 
-% Referências indiretas ("x", veja "y") para o índice remissivo (opcionais,
-% pois o índice é opcional). É comum colocar esses itens no final do documento,
-% junto com o comando \printindex, mas em alguns casos isso torna necessário
-% executar texindy (ou makeindex) mais de uma vez, então colocar aqui é melhor.
-\index{Inglês|see{Língua estrangeira}}
-\index{Figuras|see{Floats}}
-\index{Tabelas|see{Floats}}
-\index{Código-fonte|see{Floats}}
-\index{Subcaptions|see{Subfiguras}}
-\index{Sublegendas|see{Subfiguras}}
-\index{Equações|see{Modo Matemático}}
-\index{Fórmulas|see{Modo Matemático}}
-\index{Rodapé, notas|see{Notas de rodapé}}
-\index{Captions|see{Legendas}}
-\index{Versão original|see{Tese/Dissertação, versões}}
-\index{Versão corrigida|see{Tese/Dissertação, versões}}
-\index{Palavras estrangeiras|see{Língua estrangeira}}
-\index{Floats!Algoritmo|see{Floats, Ordem}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -329,31 +302,27 @@
 % Os capítulos de compõem a dissertação/tese, com numeração normal, podem
 % ser inseridos diretamente aqui ou "puxados" de outros arquivos
 \input{capitulos/introducao}
-\par
 
 \input{capitulos/trabalhos-relacionados}
-\par
 
 \input{capitulos/visualizacoes}
-\par
 
 \input{capitulos/plano-de-trabalho}
-\par
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% APÊNDICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Aqui vão apêndices. O comando appendix reinicia a numeração de capítulos e
 % passa a numerá-los com letras. Como os anteriores, ele não existe na classe
 % "article".
-\appendix
-
-% Este formato está definido mais acima na seção "APARÊNCIA/FORMATAÇÃO"
-\pagestyle{appendix}
-
-% Os apêndices podem ser inseridos diretamente aqui ou "puxados" de outros
-% arquivos
-\input{ape-conjuntos}
-\par
+%\appendix
+%
+%% Este formato está definido mais acima na seção "APARÊNCIA/FORMATAÇÃO"
+%\pagestyle{appendix}
+%
+%% Os apêndices podem ser inseridos diretamente aqui ou "puxados" de outros
+%% arquivos
+%\input{ape-conjuntos}
+%\par
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SEÇÕES FINAIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -383,6 +352,5 @@
 ]
 
 % imprime o índice remissivo no documento (opcional)
-\printindex
 
 \end{document}
