@@ -1,4 +1,4 @@
-\chapter{Trabalhos Relacionados}
+\chapter{Conceitos e Trabalhos Relacionados}
 \label{cap:trabalhos-relacionados}
 
 Este capítulo levanta considerações sobre alguns trabalhos interpretados como
@@ -7,63 +7,84 @@ para controle do tráfego de veículos. De forma geral, tais trabalhos proporcio
 para compor um conhecimento maior sobre visualização de dados do trânsito.
 
 \section{Dados de Movimentação}
-Como sabemos, existe uma variedade de informações geradas que grava a movimentação
-de vários objetos como carros, navios, aeronaves e até animais. Neste trabalho
-focamos em dados simulados.
+Aqui caracterizamos com mais detalhes dados de movimentação, seus atributos
+e como eles compõe o rastro dos veículos. Abrangemos também como eles são
+gerados pelo InterSCimulator em escala próxima da realidade segundo o modelo
+de trânsito e a pesquisa origem destino, citando também a existência de dados
+reais, como dos ônibus, de táxis, etc.
 
 \subsection{Sistemas para Controle do Trânsito}
 
-Citar trabalhos e pesquisar algumas ferramentas que são utilizadas nesse sentido.
-Falar com a scipopulis, etc... 
+Aqui citamos algumas ferramentas para controle do trânsito (seja de simulação, sejam do governo, ou
+sejam de empresas privadas como scipopulis, que tipo de soluções elas prestam e/ou
+que problemas elas apresentam e seu impacto no planejamento do transporte urbano.
 
-\subsection{Visualização do Tráfego de Veículos}
+\subsection{Visualização de dados de Movimentação}
+Aqui são levantados alguns trabalhos que utilizam dados de movimentação,
+para encontrar padrões (não necessariamente de tráfego de veículos). O objetivo
+é mostrar que esses trabalhos respondem perguntas diferentes com métodos
+e visualizações diferentes pra dar uma ideia desse universo.
 
-Dois outros trabalhos foram encontrados, eles abordam diferentes visualizações
-para também encontrar padrões no trânsito. blá blá
+De alguma maneira será apontado que as técnicas apresentadas no trabalho do
+Alex Telea sobre análise do tráfego aéreo serão utilizadas no nosso trabalho.
 
 \textbf{Visualizing interchange patterns in massive movement data}
+ Esse trabalho relacionado aborda uma maneira de se detectar padrões de direção
+na movimentação de pessoas na cidade de Singapura.
 
 \textbf{Mapping to Cells: A Simple Method to Extract Traffic Dynamics from Probe Vehicle Data}
+ Esse outro trabalho relacionado apresenta como um veículo sonda pode oferecer
+dados para a análise da dinâmica do trânsito, detecção de congestionamentos, etc.
 
-\subsection{Visualização do Tráfego Aéreo}
+\textbf{Visualização do Tráfego Aéreo}
 
-  Por razões críticas, a movimentação de aeronaves no tráfego aéreo é monitorada
-  com grande cuidado. Sistemas avançados de localização registram em tempo real
-  a posição de aeronaves que sobrevoam o planeta. Esses sistemas podem ainda
-  conter outras informações como direção, altitude, velocidade, temperatura, pressão
-  e diversos outros atributos ao longo do trajeto. O tráfego aéreo é de certa
-  forma similar à movimentação de veículos sobre as vias da cidade e visualizar
-  essas informações traz também grandes desafios.
+ Esse trabalho do Alex Telea apresenta como visualizar uma grande quantidade
+de dados do tráfego aéreo, encontrando padrões de congestionamento e mudanças
+ao longo do tempo. Aplica basicamente três técnicas de visualização, bundling,
+windowing e density maps. Seu contexto se parece bastante com o do meu trabalho
+e responde perguntas interessantes para o estudo do tráfego de veículos, sendo
+um grande candidato por onde começar na análise dos dados do simulador. 
 
-  cite{Alex}, mostra um trabalho onde ele descreve uma visualização que utiliza
-  técnicas baseadas em imagem para análise exploratória de uma grande massa
-  de dados do tráfego. Sua análise inclui a utilização de três técnicas, bundling,
-  density maps e animações. Ele argumenta que, com essas técnicas, é possível visualizar
-  uma grande quantidade de dados, tanto a posição instantânea dos aviões como também
-  sua dinâmica ao longo do tempo, sem uma grande oclusão da visualização. 
-  Dentre os resultados apresentados está a detecção de \textit{outliers}, padrões
-  e congestionamentos durante vôos.
 
-  
-  O seu sistema possui alguns parâmetros configuráveis que permitem uma exploração dos dados que
-  trazem vários insights para visualização de padrões e outliers nos dados.
+%  Por razões críticas, a movimentação de aeronaves no tráfego aéreo é monitorada
+%  com grande cuidado. Sistemas avançados de localização registram em tempo real
+%  a posição de aeronaves que sobrevoam o planeta. Esses sistemas podem ainda
+%  conter outras informações como direção, altitude, velocidade, temperatura, pressão
+%  e diversos outros atributos ao longo do trajeto. O tráfego aéreo é de certa
+%  forma similar à movimentação de veículos sobre as vias da cidade e visualizar
+%  essas informações traz também grandes desafios.
+%
+%  cite{Alex}, mostra um trabalho onde ele descreve uma visualização que utiliza
+%  técnicas baseadas em imagem para análise exploratória de uma grande massa
+%  de dados do tráfego. Sua análise inclui a utilização de três técnicas, bundling,
+%  density maps e animações. Ele argumenta que, com essas técnicas, é possível visualizar
+%  uma grande quantidade de dados, tanto a posição instantânea dos aviões como também
+%  sua dinâmica ao longo do tempo, sem uma grande oclusão da visualização. 
+%  Dentre os resultados apresentados está a detecção de \textit{outliers}, padrões
+%  e congestionamentos durante vôos.
+%
+%  
+%  O seu sistema possui alguns parâmetros configuráveis que permitem uma exploração dos dados que
+%  trazem vários insights para visualização de padrões e outliers nos dados.
+%
+%-> Highlights:
+%  - exploração das informações disponíveis e detecção de outliers
+%  - visão de grandes áreas do tráfego e durante longos períodos (e.g. dados do mundo durante 1 mês)
+%  - adaptação de várias técnicas baseadas em imagem (bundling, animation, density maps) para visualizar
+%  padrões ao longo do tempo
+%  - visualização com pouca oclusão
+%  - análise em "tempo real" com processamento na GPU
+%  - real world datasets
+%
+%-> Limitações
+%  - Ainda gera alguma oclusão, como no dataset do mundo todo
+%  - Software não disponível
+%  - não implementa queries para filtros (e.g. aviões de altitude maior que X)
+%  - Suas trilhas apresentam apenas três atributos (velocidade, direção, altura)
 
--> Highlights:
-  - exploração das informações disponíveis e detecção de outliers
-  - visão de grandes áreas do tráfego e durante longos períodos (e.g. dados do mundo durante 1 mês)
-  - adaptação de várias técnicas baseadas em imagem (bundling, animation, density maps) para visualizar
-  padrões ao longo do tempo
-  - visualização com pouca oclusão
-  - análise em "tempo real" com processamento na GPU
-  - real world datasets
-
--> Limitações
-  - Ainda gera alguma oclusão, como no dataset do mundo todo
-  - Software não disponível
-  - não implementa queries para filtros (e.g. aviões de altitude maior que X)
-  - Suas trilhas apresentam apenas três atributos (velocidade, direção, altura)
-
-\subsection{Outras análises de movimentação}
 
 \section{Conclusão}
+
+Aqui refletimos a vasta gama de possibilidades e a necessidade de se compor
+uma ferramenta para análise dos dados do tráfego do simulador.
 

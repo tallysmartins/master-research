@@ -3,75 +3,53 @@
 \label{cap:introducao}
 
 % Contexto e motivação
-Com a crescente disponibilidade de tecnologias para sistemas de localização,
-como GPS, ocorre concomitantemente um grande aumento na geração de dados de
-movimentação, que registram a localização de veículos, telefones celulares e
-até mesmo animais, se estendendo por uma variedade de aplicações.
+Apresentação do contexto argumentando sobre o aumento da geração de dados de
+movimentação (geolocalizados) e suas aplicações em diversas áreas como carros,
+pessoas,etc. Em seguida é citado o foco do trabalho no tráfego de veículos a
+partir de simulações bem como a motivação para analisar esses dados na
+perspectiva de estudos que buscam melhorias para o transporte urbano, apontando
+ainda outros estudos que usam dados de movimentação em outros contextos, como
+no tráfego de embarcações e aviões.
 
-Focamos então no tráfego de veículos, buscando entender
-o seu fluxo e sua dinâmica a partir de simulações que registram a movimentação
-de veículos no dia a dia de uma grande cidade.  Esses dados, são medidas espaço
-temporais e podem conter vários atributos como
-a velocidade, direção ou outras informações pertinentes de um objeto em movimentação,
-constituindo um rastro deste objeto. A captura, análise e visualização de tais
-dados é um amplo e interessante campo de estudo. No contexto deste trabalho, utilizamos
-o rastro de veículos para  entender a estrutura do tráfego na cidade, como um
-estudo que que busca viabilizar ferramentas para um melhor planejamento do transporte urbano.
-
-Sistemas para monitoramento do tráfego podem ajudar a detectar congestionamentos,
-evitar acidentes e dar suporte para uma melhor tomada de decisões. Setores de tráfego
-aéreo e marítimo se apoiam em sistemas para fazer o monitoramento de aviões
-e embarcações, como mostram os trabalhos de Tijmein e Xablau do mar.
 
 % Problema
-Fazer uma análise da movimentação de veículos pode não ser uma tarefa simples dada
-a grande quantidade de informação. Pensando em um serviço como o Uber, por exemplo,
-um simples conjunto de dados de um dia pode facilmente obter milhares de trajetórias e milhões
-de entradas, o que traz desafios interessantes para se atingir uma boa escalabilidade
-visual e computacional. Desenhar todos os caminhos dos veículos em uma tela  não é uma solução
-adequada já que a sobreposição de várias rotas irá naturalmente gerar uma confusão na visualização.
-Há também o desafio computacional de se explorar uma grande massa de dados, principalmente
-falando no tráfego de veículos de uma grande cidade como São Paulo, 
-que segundo o órgão de fiscalização
-Detran\footnote{www.detran.sp.gov.br}, tem mais de 8 milhões de veículos.
+Encadeado no parágrafo anterior é apresentado o problema em se fazer
+uma análise da movimentação de veículos dados os desafios de escalabilidade
+visual e computacional e embasamos o problema apontando como é um cenário que
+pode chegar a milhões de dados em uma grande cidade como São Paulo.
 
-% A Proposta
-Uma visualização iterativa com a aplicação de técnicas avançadas de visualização
-pode auxiliar na identificação de padrões no trânsito e ajudar a responder questões como,
-qual é a densidade e distribuição dos veículos pelas vias da cidade, quais vias
-estão mais congestionadas, como os congestionamentos afetam o trânsito em
-geral, quais vias concentram o maior fluxo de veículos, etc. Essas questões a
-serem respondidas podem auxiliar na tomada de decisões e na gestão da mobilidade
-urbana de forma que se obtenha uma maior eficiência do transporte
-veicular e da qualidade de vida dos cidadãos.
+% A Proposta e justificativa
+Por fim é introduzida a proposta do trabalho em se
+desenvolver uma visualização interativa com a aplicação de técnicas de
+visualização avançadas e como elas podem auxiliar na identificação de padrões
+no trânsito, como congestionamentos, utilização das vias e dar suporte 
+à gestão da mobilidade urbana.
 
 \section{Objetivos}
 \label{sec:objetivos}
 
-O objetivo deste trabalho é identificar padrões de movimentação dos veículos que
-se movem pelas vias da cidade ao longo do tempo com o uso de técnicas
-de visualização avançadas, buscando uma resposta para as seguintes
-questões de pesquisa:
+O principal objetivo do trabalho é selecionar e implementar técnicas de
+visualização para identificar padrões de movimentação dos veículos que se movem
+pelas vias da cidade ao longo do tempo. Dado esse objetivo foram levantadas até
+o momento três questões de pesquisa:
 
-\begin{enumerate}
-  \item Como visualizar dados simulados do tráfego de uma grande cidade como São Paulo?
+\begin{enumerate} 
+  \item Como visualizar dados simulados do tráfego de uma grande cidade como
+São Paulo?
 
-  \item Como identificar padrões de movimentação dos veículos que se movem pelas vias
-  da cidade ao longo do tempo?
+  \item Como identificar padrões de movimentação dos veículos que se movem
+pelas vias da cidade ao longo do tempo?
         
-  \item Como as técnicas de visualização (bundling, density maps) podem auxiliar na
-    identificação de padrões no trânsito?
+  \item Que técnicas de visualização podem auxiliar na identificação de padrões
+no trânsito?
 \end{enumerate}
 
-Para atingir o objetivo geral, os seguintes objetivos específicos devem ser atingidos:
-
-\begin{itemize}
-  \item Obtenção e tratamento dos dados simulados do tráfego de veículos na cidade de São Paulo
-  \item Pesquisa de ferramentas e tecnologias para desenvolvimento da ferramenta de visualização
-  \item Implementação da ferramenta de visualização dos dados 
-  \item Análise e interpretação dos resultados
-\end{itemize}
-
-\section{Estrutura do Trabalho}
-
-As seções tal tal descrevem . . .
+%Para atingir o objetivo geral, os seguintes objetivos específicos devem ser atingidos:
+%
+%\begin{itemize}
+%  \item Obtenção dos dados simulados do tráfego de veículos na cidade de São Paulo
+%  \item Seleção de Técnicas de Visualização
+%  \item Pesquisa de ferramentas e tecnologias para aplicação das técnicas
+%  \item Implementação das técnicas de visualização sobre os dados da simulação
+%  \item Análise e avaliação dos resultados
+%\end{itemize}
