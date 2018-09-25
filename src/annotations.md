@@ -51,6 +51,13 @@ esse comportamento modificado
 [Folium notebooks examples](http://nbviewer.jupyter.org/github/python-visualization/folium/tree/master/examples/)
 
 
+---------------- Para deixar o problema mais claro/interessante ---------------
+How can we translate data into dollars?
+What impact do I want to make with this data?
+What business value does our model bring to the table?
+What will save us lots of money?
+What can be done to make our business run more efficiently?
+
 - Sharp questions
 
 1) Defina um problema pequeno, pense em perguntas que quero responder e formule o
@@ -66,12 +73,6 @@ problema em uma frase: (data-science ou data-viz?)
 - Qual a melhor rota para se chegar de um ponto A até um ponto B levando
 em consideração o tráfego?
 
----------------- Para deixar o problema mais claro/interessante ---------------
-How can we translate data into dollars?
-What impact do I want to make with this data?
-What business value does our model bring to the table?
-What will save us lots of money?
-What can be done to make our business run more efficiently?
 
 2) Que dados tenho/preciso para responder as questões levantadas?
 
