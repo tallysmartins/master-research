@@ -1,51 +1,68 @@
 \chapter{Conceitos e Trabalhos Relacionados}
 \label{cap:trabalhos-relacionados}
 
-Este capítulo levanta considerações sobre alguns trabalhos interpretados como
-relevantes na análise de dados de movimentação e também alguns sistemas existentes
-para controle do tráfego de veículos. De forma geral, tais trabalhos proporcionaram uma base
-para compor um conhecimento maior sobre visualização de dados do trânsito.
+Nesse capítulo eu faço considerações sobre trabalhos relevantes na
+análise de dados de movimentação e também alguns sistemas existentes para
+controle do tráfego de veículos. De forma geral, tais trabalhos proporcionaram
+uma base para compor um conhecimento maior sobre visualização de dados do
+trânsito.
 
 \section{Dados de Movimentação}
 
-Aqui caracterizamos com mais detalhes dados de movimentação, seus atributos
-de maneira geral. Falarei também como o simulador é empregado para a obtenção
+Aqui eu caracterizo com mais detalhes dados de movimentação, seus atributos
+de maneira geral e sua modelagem em grafos. Explico que podem ser dados point-to-point
+e region-to-point e que nesse trabalho estamos interessados em point-to-point com alta granularidade,
+ou seja, temos todos os pontos do trajeto e não apenas origem destino (faz diferença).
+Irei falar também como o simulador é empregado para a obtenção
 dos dados que compõe o rastro dos veículos e outras fontes de obtenção de dados
-reais de movimentação do tráfego de veículos (onibus, taxi, etc).
+reais de movimentação do tráfego de veículos (onibus, taxi, etc). Em seguida apresento
+algumas técnicas de visualização para esse tipo de dado.
+
+\section{Técnicas de Visualização}
+  Apresento algumas técnicas bastante utilizadas para diminuir a oclusão na visualização
+  de uma grande quantidade de dados geoespaciais.
+  \subsection{Time Window}
+    Não é propriamente uma técnica de visualização, mas um recurso que é combinado
+    para controlar os aspectos temporais inerentes da dinâmica presente nesse tipo
+    de dado, permitindo desde a visualização instantânea como a visualização
+    de períodos de tempo.
+  \subsection{Density Maps}
+    É uma técnica muito utilizada para dar informações sobre áreas de grande
+    densidade, pode revelar ainda padrões de congestionamentos ou pontos de maior
+    e menor fluxo. Existem vários algoritmos para computar mapas de densidade e
+    várias maneiras de codificá-lo em um mapa de cores e escalas, como logarítmica,
+    linear, quadrática, etc.
+  \subsection{Bundling}
+    É uma técnica bastante utilizada para reduzir a oclusão na visualização de grandes
+    grafos. Existem vários algoritmos, etc...
 
 \section{Sistemas para Controle do Trânsito}
 
-Aqui citamos algumas ferramentas para controle do trânsito (seja de simulação, sejam do governo, ou
+Aqui eu cito algumas ferramentas para controle do trânsito (seja de simulação, sejam do governo, ou
 sejam de empresas privadas como scipopulis, que tipo de soluções elas prestam e/ou
 que problemas elas apresentam e seu impacto no planejamento do transporte urbano.
+(Acho importante essa parte, mas preciso de sugestões)
 
 \section{Trabalhos sobre Visualização de Dados de Movimentação}
 
-Aqui são levantados alguns trabalhos relacionados que utilizam dados de movimentação,
+Aqui eu falo sobre três trabalhos relacionados que eu considero importantes que utilizam dados de movimentação,
 para encontrar padrões (não necessariamente de tráfego de veículos). O objetivo
 é mostrar que esses trabalhos respondem perguntas diferentes com métodos
 e visualizações diferentes pra dar uma ideia desse universo.
 
-De alguma maneira será apontado que as técnicas apresentadas no trabalho do
-Alex Telea sobre análise do tráfego aéreo serão utilizadas no nosso trabalho.
-
 \subsection{Visualizing interchange patterns in massive movement data}
- Esse trabalho relacionado aborda uma maneira de se detectar padrões de direção
-na movimentação de pessoas na cidade de Singapura.
+ Esse trabalho aborda uma maneira de se detectar padrões de mudança de direção
+usando como caso de uso a movimentação de pessoas na cidade de Singapura.
 
-\subsection{Mapping to Cells: A Simple Method to Extract Traffic Dynamics from Probe Vehicle Data}
- Esse outro trabalho relacionado apresenta como um veículo sonda pode oferecer
-dados para a análise da dinâmica do trânsito, detecção de congestionamentos, etc.
+\subsection{Revealing Patterns and Trends of Mass Mobility through Spatial
+and Temporal Abstraction of Origin-Destination Movement Data}
 
 \subsection{Visualização do Tráfego Aéreo}
-
  Esse trabalho do Alex Telea apresenta como visualizar uma grande quantidade
 de dados do tráfego aéreo, encontrando padrões de congestionamento e mudanças
-ao longo do tempo. Aplica basicamente três técnicas de visualização, bundling,
-windowing e density maps. Seu contexto se parece bastante com o do meu trabalho
+ao longo do tempo. Seu contexto se parece bastante com o do meu trabalho
 e responde perguntas interessantes para o estudo do tráfego de veículos, sendo
-um grande candidato por onde começar na análise dos dados do simulador. 
-
+um grande candidato por onde começar na análise dos dados do simulador.
 
 %  Por razões críticas, a movimentação de aeronaves no tráfego aéreo é monitorada
 %  com grande cuidado. Sistemas avançados de localização registram em tempo real

@@ -3,34 +3,41 @@
 \label{cap:introducao}
 
 % Contexto e motivação
-Apresentação do contexto argumentando sobre o aumento da geração de dados de
+Aqui eu darei uma introdução do contexto e da motivação, argumentando sobre o aumento da geração de dados de
 movimentação (geolocalizados) e suas aplicações em diversas áreas como carros,
-pessoas,etc. Em seguida é citado o foco do trabalho no tráfego de veículos a
-partir de simulações bem como a motivação para analisar esses dados na
-perspectiva de estudos que buscam melhorias para o transporte urbano, apontando
-ainda outros estudos que usam dados de movimentação em outros contextos, como
-no tráfego de embarcações e aviões.
-
+pessoas,etc. Em seguida irei deixar claro o foco do trabalho no tráfego de veículos a
+partir de simulações, defendendo o porque de analisar esses dados na
+perspectiva de estudos que buscam melhorias para o transporte urbano e como simulador
+pode auxiliar nesse processo. Aponto ainda outros estudos que usam dados de
+movimentação em outros contextos, como no tráfego de embarcações e aviões.
 
 % Problema
-Encadeado no parágrafo anterior é apresentado o problema em se fazer
-uma análise da movimentação de veículos dados os desafios de escalabilidade
-visual e computacional e embasamos o problema apontando como é um cenário que
-pode chegar a milhões de dados em uma grande cidade como São Paulo.
+Encadeado no parágrafo anterior eu apresento o problema em se fazer
+uma análise da movimentação de veículos em uma grande cidade como São Paulo, que apresenta
+desafios de escalabilidade visual e computacional, encaixando no contexto de visualização de dados
+espaço temporais que são comumente representados por grafos dinâmicos. Abordo a relevância
+do problema comentando a complexidade em se construir visualizações com pouca oclusão
+e que codifiquem vários atributos, como velocidade, direção e que ainda que mostrem
+correlações com outras fontes de dados, como dados climáticos ou socio-econômicos. 
+Afirmo ainda  necessidade de que tais ferramentas e que elas podem auxiliar à tomada
+de decisões e na busca de melhorias na gestão da mobilidade urbana.
 
 % A Proposta e justificativa
-Por fim é introduzida a proposta do trabalho em se
-desenvolver uma visualização interativa com a aplicação de técnicas de
-visualização avançadas e como elas podem auxiliar na identificação de padrões
-no trânsito, como congestionamentos, utilização das vias e dar suporte 
-à gestão da mobilidade urbana.
+Por fim eu apresento a proposta do trabalho em se
+desenvolver uma ferramenta para visualização interativa com a aplicação de técnicas de
+visualização que permitam enxergar uma grande quantidade de dados do trânsito
+obtidos a partir de um simulador de cidades inteligentes. Defendo também que tal
+ferramenta pode ainda ser utilizada de maneira a analisar quaisquer outras fontes
+de dados de movimentação com características similares, como dados
+reais de ônibus, táxi ou outros veículos que se movem nas ruas da cidades 
+(futuros carros voadores da uber?)
 
 \section{Objetivos}
 \label{sec:objetivos}
 
-O principal objetivo do trabalho é selecionar e implementar técnicas de
-visualização para identificar padrões de movimentação dos veículos que se movem
-pelas vias da cidade ao longo do tempo. Dado esse objetivo foram levantadas até
+O principal objetivo do trabalho é selecionar desenvolver uma visualização que
+mostre o fluxo de veículos e vários atributos como, direção, velocidade e sua
+dinâmica ao longo do tempo. Dado esse objetivo foram levantadas até
 o momento três questões de pesquisa:
 
 \begin{enumerate} 
