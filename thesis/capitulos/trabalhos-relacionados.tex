@@ -1,40 +1,44 @@
 \chapter{Conceitos e Trabalhos Relacionados}
 \label{cap:trabalhos-relacionados}
 
-Nesse capítulo eu faço considerações sobre trabalhos relevantes na
-análise de dados de movimentação e também alguns sistemas existentes para
-controle do tráfego de veículos. De forma geral, tais trabalhos proporcionaram
-uma base para compor um conhecimento maior sobre visualização de dados do
-trânsito.
+Nesse capítulo eu faço considerações sobre trabalhos relevantes na análise de
+dados de movimentação e também do InterSCimulator.  De forma geral, tais
+trabalhos proporcionaram uma base para compor um conhecimento maior sobre
+visualização de dados do trânsito.
 
 \section{Dados de Movimentação}
 
-Aqui eu caracterizo com mais detalhes dados de movimentação, seus atributos
-de maneira geral e sua modelagem em grafos. Explico que podem ser dados point-to-point
-e region-to-point e que nesse trabalho estamos interessados em point-to-point com alta granularidade,
-ou seja, temos todos os pontos do trajeto e não apenas origem destino (faz diferença).
-Irei falar também como o simulador é empregado para a obtenção
-dos dados que compõe o rastro dos veículos e outras fontes de obtenção de dados
-reais de movimentação do tráfego de veículos (onibus, taxi, etc). Em seguida apresento
-algumas técnicas de visualização para esse tipo de dado.
+  Aqui eu caracterizo com mais detalhes dados de movimentação, seus atributos de
+maneira geral e sua modelagem em grafos. Explico que podem ser dados
+point-to-point e region-to-point e que nesse trabalho estamos interessados em
+point-to-point com alta granularidade, ou seja, temos todos os pontos do
+trajeto e não apenas origem destino (faz diferença).  
+
+\section{InterSCimulator}
+  Irei falar também como o
+  simulador é empregado para a obtenção dos dados que compõe o rastro dos
+  veículos e outras fontes de obtenção de dados reais de movimentação do tráfego
+  de veículos (onibus, taxi, etc). Em seguida apresento algumas técnicas de
+  visualização para esse tipo de dado.
 
 \section{Técnicas de Visualização}
-  Apresento algumas técnicas bastante utilizadas para diminuir a oclusão na visualização
-  de uma grande quantidade de dados geoespaciais.
-  \subsection{Time Window}
+  Apresento algumas técnicas bastante utilizadas para diminuir a oclusão na
+visualização de uma grande quantidade de dados geoespaciais.
+
+\subsection{Time Window}
     Não é propriamente uma técnica de visualização, mas um recurso que é combinado
-    para controlar os aspectos temporais inerentes da dinâmica presente nesse tipo
-    de dado, permitindo desde a visualização instantânea como a visualização
-    de períodos de tempo.
-  \subsection{Density Maps}
+  para controlar os aspectos temporais inerentes da dinâmica presente nesse tipo
+  de dado, permitindo desde a visualização instantânea como a visualização
+  de períodos de tempo.
+\subsection{Density Maps}
     É uma técnica muito utilizada para dar informações sobre áreas de grande
-    densidade, pode revelar ainda padrões de congestionamentos ou pontos de maior
-    e menor fluxo. Existem vários algoritmos para computar mapas de densidade e
-    várias maneiras de codificá-lo em um mapa de cores e escalas, como logarítmica,
-    linear, quadrática, etc.
-  \subsection{Bundling}
+  densidade, pode revelar ainda padrões de congestionamentos ou pontos de maior
+  e menor fluxo. Existem vários algoritmos para computar mapas de densidade e
+  várias maneiras de codificá-lo em um mapa de cores e escalas, como logarítmica,
+  linear, quadrática, etc.
+\subsection{Bundling}
     É uma técnica bastante utilizada para reduzir a oclusão na visualização de grandes
-    grafos. Existem vários algoritmos, etc...
+  grafos. Existem vários algoritmos, etc...
 
 \section{Sistemas para Controle do Trânsito}
 
@@ -99,10 +103,4 @@ um grande candidato por onde começar na análise dos dados do simulador.
 %  - Software não disponível
 %  - não implementa queries para filtros (e.g. aviões de altitude maior que X)
 %  - Suas trilhas apresentam apenas três atributos (velocidade, direção, altura)
-
-
-\section{Conclusão}
-
-Aqui refletimos a vasta gama de possibilidades e a necessidade de se compor
-uma ferramenta para análise dos dados do tráfego do simulador.
 
