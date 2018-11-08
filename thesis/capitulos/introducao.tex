@@ -4,53 +4,25 @@
 
 % Contexto e motivação
 Aqui eu darei uma introdução do contexto e da motivação, argumentando sobre o aumento da geração de dados de
-movimentação (geolocalizados) e suas aplicações em diversas áreas como carros,
-pessoas,etc. Em seguida irei deixar claro o foco do trabalho no tráfego de veículos 
+movimentação (geolocalizados) e suas aplicações para estudo das atividades de movimentação
+em diversas áreas como carros, pessoas, etc. Em seguida irei deixar claro o foco do trabalho no tráfego de veículos
 na cidade. Defendendo o porque de analisar esses dados na
-perspectiva de estudos que buscam melhorias para o transporte urbano. Aponto
-ainda outros estudos que usam dados de movimentação em outros contextos, como no tráfego de embarcações e aviões.
+perspectiva de estudos que buscam melhorias para o transporte urbano.
 
 % Problema
-Encadeado no parágrafo anterior eu apresento o problema em se fazer
-uma análise da movimentação de veículos em uma grande cidade, considerando-se
-os múltiplos modais existentes, como carros, ônibus, metrô, bicicletas. Levanto
-que a visualização desses dados possui desafios de escalabilidade visual e computacional,
+Encadeado no parágrafo anterior eu apresento o problema em se fazer uma análise
+da movimentação de veículos em uma grande cidade, dividido em dois
+subproblemas, a aquisição de dados de movimentação de veículos e a necessidade
+do uso de técnicas sofisticadas para simplificar a visualização já que não é
+viável extrair muitas informações simplesmente desenhando todos dados brutos e
+também dos seus múltiplos atributos que esses dados podem conter, como direção,
+velocidade, etc.  Afirmo ainda que visualizar essa grande quantidade de dados é
+um grande desafio em termos de escalabilidade visual e computacional.
 
 % A Proposta e justificativa
-Apresento então o bundling como técnica para simplificar a visualização desse tipo de dado
-e que ele pode ser usado na perspectiva dos diferentes modais de transporte.
-Afirmo ainda que uma visualização como essa pode auxiliar à tomada
-de decisões e na busca de melhorias na gestão da mobilidade urbana.
-
-Por fim eu apresento a proposta do trabalho em se
-desenvolver uma ferramenta para visualização interativa com a aplicação do bundling 
-permitam enxergar uma grande quantidade de dados do trânsito
-obtidos a partir de um simulador de cidades inteligentes. Defendo também que tal
-ferramenta pode ainda ser utilizada de maneira a analisar quaisquer outras fontes
-de dados de movimentação com características similares, como dados
-reais de ônibus, táxi ou outros veículos que se movem nas ruas da cidades.
-
-\section{Objetivos}
-\label{sec:objetivos}
-
-O principal objetivo do trabalho é desenvolver uma visualização que utilize o bundling
-para visualizar a dinâmica da movimentação do tráfego na cidade considerando
-os diferentes modais de transporte. Dado esse objetivo foram levantadas duas questões de pesquisa:
-
-\begin{description}
-  \item[QP1] Como o bundling pode auxiliar na identificação de padrões de movimentação nos diferentes modais de transporte?
-
-  \item[QP2] Como o bundling pode auxiliar na visualização da simulação do tráfego de veículos?
-
-\end{description}
-
-
-%Para atingir o objetivo geral, os seguintes objetivos específicos devem ser atingidos:
-%
-%\begin{itemize}
-%  \item Obtenção dos dados simulados do tráfego de veículos na cidade de São Paulo
-%  \item Seleção de Técnicas de Visualização
-%  \item Pesquisa de ferramentas e tecnologias para aplicação das técnicas
-%  \item Implementação das técnicas de visualização sobre os dados da simulação
-%  \item Análise e avaliação dos resultados
-%\end{itemize}
+Proponho então para o primeiro problema o uso de dados simulados de um
+simulador de cidades inteligentes, capaz de simular o tráfego de veículos de
+uma grande cidade como São Paulo. Para o segundo problema proponho o uso do
+bundling para visualização do dados de movimentação de veículos de
+forma que ela possa auxiliar na exploração da dinâmica do trânsito na cidade e
+consequentemente no planejamento da mobilidade urbana.

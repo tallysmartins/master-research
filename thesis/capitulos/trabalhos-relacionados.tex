@@ -2,45 +2,31 @@
 \label{cap:trabalhos-relacionados}
 
 Nesse capítulo eu faço considerações sobre trabalhos relevantes na análise e
-visualização de dados de movimentação.  De forma geral, tais trabalhos
-proporcionaram uma base para compor um conhecimento maior sobre visualização de
-dados geoespaciais.
+visualização de dados de movimentação e que utilizam bundling .  De forma
+geral, tais trabalhos proporcionaram uma base para compor um conhecimento maior
+sobre  a área. Pretendo falar sobre qual algoritmo de bundling usado e se houve
+alguma peculiaridade, qual tamanho do dataset, que tipo de padrões o trabalho
+apresentou na visualização
 
-\section{Trabalhos sobre Visualização de Dados de Movimentação}
+\subsection{Visualizing Interchange Patterns in Massive Movement Data}
+  \cite{doi:10.1111/cgf.12114}
+  Esse trabalho apresenta um diagrama circular que mostra a direção do fluxo
+entre diferentes nós que simbolizam um ponto de interesse. Ele utiliza como estudo
+de caso estações de metrô de Singapura com dados sigilosos do sistema de transporte.
 
-Aqui eu falo sobre três trabalhos relacionados que eu considero importantes que utilizam dados de movimentação,
-para encontrar padrões (não necessariamente de tráfego de veículos). O objetivo
-é mostrar que esses trabalhos respondem perguntas diferentes com métodos
-e visualizações diferentes pra dar uma ideia desse universo.
-
-\subsection{Visualizing interchange patterns in massive movement data}
- Esse trabalho aborda uma maneira de se detectar padrões de mudança de direção
-usando como caso de uso a movimentação de pessoas na cidade de Singapura.
-
-\subsection{Revealing Patterns and Trends of Mass Mobility through Spatial
-and Temporal Abstraction of Origin-Destination Movement Data}
-
-\subsection{Visualização do Tráfego Aéreo}
+\subsection{Dynamic Multi Scale Visualization of Flight Data}
  Esse trabalho do Alex Telea apresenta como visualizar uma grande quantidade
-de dados do tráfego aéreo, encontrando padrões de congestionamento e mudanças
-ao longo do tempo. Seu contexto se parece bastante com o do meu trabalho
-e responde perguntas interessantes para o estudo do tráfego de veículos, sendo
-um grande candidato por onde começar na análise dos dados do simulador.
+de dados do tráfego aéreo. 
 
-\section{Trabalhos sobre bundling}
+\subsection{Visualization of vessel movements}
+ Esse trabalho mostra a dinâmica do tráfego de embarcações.
+
+\subsection{Untangling origin-destination flows in geographic information systems}
+ Esse trabalho mostra a implementação do bundling como plugin de uma ferramenta GIS.
+O algoritmo apresentado ainda recebe uma modificação ao algoritmo de bundling FDEB.
 
 \subsection{Divided Edge Bundling for Directional Network Data}
-  Um trabalho que utiliza bundling dividido para separar os dados pela direção
-do movimento e também utiliza um algoritmo de clusterização k-means para agrupar
-trajetórias com origem-destino similares antes de aplicar o bundling propriamente
-dito. (esse trabalho é legal pois separar pela direção é importante)
-
-\subsection{Bundled Visualization of Dynamic Graph and Trail Data}
-  Um trabalho que traz novas técnicas para o bundling, mapeando o algoritmo
-no que chamamos de image-based, que é o fato de se gerar uma imagem do grafo
-e depois aplicar o bundling. Isso faz com que a técnica mapeie bem para implementações
-na GPU. (esse trabalho é legal porque traz uma técnica mais escalável do bundling e como
-aplicar em grafos stream)
+  Esse trabalho mostra uma abordagem para diferenciar no bundling a direção do movimento.
 
 %  Por razões críticas, a movimentação de aeronaves no tráfego aéreo é monitorada
 %  com grande cuidado. Sistemas avançados de localização registram em tempo real
