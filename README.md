@@ -16,4 +16,4 @@
 
 ## Acknowledges
 
- Thanks to USP, CAPES, CNPQ, FUSP and the Brazilian people who pay their taxes =)
+ Thanks to USP, CAPES, FUSP and the Brazilian people who pay their taxes =)
