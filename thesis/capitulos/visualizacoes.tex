@@ -1,28 +1,33 @@
-\chapter{Metodologia}
+\chapter{InterSCity Plot}
 \label{cap:visualizacao}
 
-\section{Utilização do Bundling}
-  Aqui eu falo em alto nível sobre como será a proposta, talvez já definindo exatamente
-qual implementação de bundling eu vou utilizar e pontuo alguns desafios técnicos relevantes para o
-chegar à solução que irá permitir a análise dos dados do tráfego, como a escalabilidade
-computacional e falta de bibliotecas existentes.
+Esse capítulo introduz as técnicas de visualização utilizadas no desenvolvimento
+de uma ferramenta para a análise do tráfego de veículos, como foram selecionadas e desafios envolvidos.
 
-\section{Conjuntos de dados}
+\section{Modelo de dados}
 
-\subsection{Tráfego simulado de veículos}
-  Nesta seção eu apresento mais detalhes dos dados gerados pelo simulador, qual
-dataset será usado, seus atributos, tamanho e o que ele representa. Ressalto
-a simulação de transportes multi-modais e como elas são geradas a partir da pesquisa origem-destino.
+Esta seção explica de onde vem os dados e quais suas características de maneira geral,
+citando os trabalhos publicados sobre o InterSCimulator. Abordar também a disponibilidade
+dos dados reais dos ônibus de São Paulo.
 
-\subsection{Tráfego dos ônibus de São Paulo}
-  Nesta seção eu apresento mais detalhes dos dados da SP trans que também serão
-utilizados na visualização. 
+\section{Seleção das Técnicas}
 
-\section{Avaliação da Visualização}
-  Falo sobre como vou avaliar qualitativamente e quantitativamente a visualização
-construída. 
+Aqui se explica de maneira explícita a seleção do trabalho de Alex Telea e as técnicas
+apontadas por ele para análise do tráfego aéreo. Apontamos as similaridades entre
+os dois contextos e as peculiaridades. Defenderemos também que mesmo se baseando
+no trabalho, o mesmo não se encontra disponível e não é reproduzível. Pontuamos também
+que a escolha das visualizações do seu trabalho respondem questões importantes
+para o estudo do tráfego e que outras visualizações apresentadas em outros estudos citados
+nos trabalhos relacionados podem ser adicionadas no futuro.
+
+\section{Desafios Técnicos}
+
+Nesta seção será descrito alguns desafios técnicos relevantes para o desenvolvimento da solução
+que irá permitir a análise dos dados, como a seleção de ferramentas,
+desafios de escalabilidade computacional e o uso de bibliotecas livres disponíveis.
 
 \section{Resultados Preliminares}
 
-Resultados alcançados até o momento.
-
+Aqui são apresentados os experimentos com algumas visualizações iniciais já construídas
+utilizando uma parte dos dados, descrevendo todo o pipeline envolvido, desde a seleção, à filtragem dos dados,
+transformações executadas e por fim a visualização com a ferramenta escolhida.

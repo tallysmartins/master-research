@@ -3,30 +3,75 @@
 \label{cap:introducao}
 
 % Contexto e motivação
-Aqui eu darei uma introdução do contexto e da motivação, argumentando sobre o
-aumento da geração de dados de movimentação (geolocalizados) e suas aplicações
-para estudo das atividades de movimentação em diversas áreas como carros,
-pessoas, etc. Em seguida irei deixar claro o foco do trabalho no tráfego de
-veículos na cidade. Defendendo o porque de analisar esses dados na perspectiva
-de estudos que buscam melhorias para o transporte urbano. 
+Com a crescente disponibilidade de tecnologias para sistemas de localização,
+como GPS, ocorre concomitantemente um grande aumento na geração de dados de
+movimentação, que registram a localização de veículos, telefones celulares e
+até mesmo animais, se estendendo por uma variedade de aplicações.
+
+Focamos então no tráfego de veículos, buscando entender
+o seu fluxo e sua dinâmica a partir de simulações que registram a movimentação
+de veículos no dia a dia de uma grande cidade.  Esses dados, são medidas espaço
+temporais e podem conter vários atributos como
+a velocidade, direção ou outras informações pertinentes de um objeto em movimentação,
+constituindo um rastro deste objeto. A captura, análise e visualização de tais
+dados é um amplo e interessante campo de estudo. No contexto deste trabalho, utilizamos
+o rastro de veículos para  entender a estrutura do tráfego na cidade, como um
+estudo que que busca viabilizar ferramentas para um melhor planejamento do transporte urbano.
+
+Sistemas para monitoramento do tráfego podem ajudar a detectar congestionamentos,
+evitar acidentes e dar suporte para uma melhor tomada de decisões. Setores de tráfego
+aéreo e marítimo se apoiam em sistemas para fazer o monitoramento de aviões
+e embarcações, como mostram os trabalhos de Tijmein e Xablau do mar.
 
 % Problema
-Encadeado no parágrafo anterior eu apresento o problema em se fazer uma análise
-da movimentação de veículos em uma grande cidade, dividido em dois
-subproblemas, a aquisição de dados de movimentação de veículos e a necessidade
-do uso de técnicas sofisticadas para simplificar a visualização já que não é
-viável extrair muitas informações simplesmente desenhando todos dados brutos e
-também dos seus múltiplos atributos que esses dados podem conter, como direção,
-velocidade, etc.  Afirmo ainda que visualizar essa grande quantidade de dados é
-um grande desafio em termos de escalabilidade visual e computacional.
+Fazer uma análise da movimentação de veículos pode não ser uma tarefa simples dada
+a grande quantidade de informação. Pensando em um serviço como o Uber, por exemplo,
+um simples conjunto de dados de um dia pode facilmente obter milhares de trajetórias e milhões
+de entradas, o que traz desafios interessantes para se atingir uma boa escalabilidade
+visual e computacional. Desenhar todos os caminhos dos veículos em uma tela  não é uma solução
+adequada já que a sobreposição de várias rotas irá naturalmente gerar uma confusão na visualização.
+Há também o desafio computacional de se explorar uma grande massa de dados, principalmente
+falando no tráfego de veículos de uma grande cidade como São Paulo, 
+que segundo o órgão de fiscalização
+Detran\footnote{www.detran.sp.gov.br}, tem mais de 8 milhões de veículos.
 
-% A Proposta e justificativa
-Proponho então para o primeiro problema o uso de dados simulados de um
-simulador de cidades inteligentes, capaz de simular o tráfego de veículos de
-uma grande cidade como São Paulo. Para o segundo problema proponho o uso do
-bundling para visualização do dados de movimentação de veículos de
-forma que ela possa auxiliar na exploração da dinâmica do trânsito na cidade e
-consequentemente no planejamento da mobilidade urbana.
+% A Proposta
+Uma visualização iterativa com a aplicação de técnicas avançadas de visualização
+pode auxiliar na identificação de padrões no trânsito e ajudar a responder questões como,
+qual é a densidade e distribuição dos veículos pelas vias da cidade, quais vias
+estão mais congestionadas, como os congestionamentos afetam o trânsito em
+geral, quais vias concentram o maior fluxo de veículos, etc. Essas questões a
+serem respondidas podem auxiliar na tomada de decisões e na gestão da mobilidade
+urbana de forma que se obtenha uma maior eficiência do transporte
+veicular e da qualidade de vida dos cidadãos.
 
-Referências para esse capítulo: \cite{Andrienko2011}, \cite{Liu2013},
-\cite{Hurter2013}, \cite{Zhou2013}
+\section{Objetivos}
+\label{sec:objetivos}
+
+O objetivo deste trabalho é identificar padrões de movimentação dos veículos que
+se movem pelas vias da cidade ao longo do tempo com o uso de técnicas
+de visualização avançadas, buscando uma resposta para as seguintes
+questões de pesquisa:
+
+\begin{enumerate}
+  \item Como visualizar dados simulados do tráfego de uma grande cidade como São Paulo?
+
+  \item Como identificar padrões de movimentação dos veículos que se movem pelas vias
+  da cidade ao longo do tempo?
+        
+  \item Como as técnicas de visualização (bundling, density maps) podem auxiliar na
+    identificação de padrões no trânsito?
+\end{enumerate}
+
+Para atingir o objetivo geral, os seguintes objetivos específicos devem ser atingidos:
+
+\begin{itemize}
+  \item Obtenção e tratamento dos dados simulados do tráfego de veículos na cidade de São Paulo
+  \item Pesquisa de ferramentas e tecnologias para desenvolvimento da ferramenta de visualização
+  \item Implementação da ferramenta de visualização dos dados 
+  \item Análise e interpretação dos resultados
+\end{itemize}
+
+\section{Estrutura do Trabalho}
+
+As seções tal tal descrevem . . .
